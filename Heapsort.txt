@@ -1,0 +1,68 @@
+#include <iostream>
+#include<fstream>
+using namespace std;
+void headsort (int b[], int n);
+void almacenar(int b[], int n);
+int main() {
+	int n;
+	ofstream archivo;
+  int A[100];
+  archivo.open("headsort.txt",ios::app);
+  cout<<"ORDENAMIENTO HEADSORT\n";
+  archivo<<"ORDENAMIENTO HEADSORT\n";
+	cout<<"ingrese el tamaño del arreglo:";
+	cin>>n;
+ for(int i=1;i<=	n;i++)
+    cin>> A[i];
+
+  cout<<"arreglo antes del arreglo:|";
+
+  archivo<<"arreglo antes del arreglo:|";
+
+  for(int i=1;i<=n;i++){
+    cout<<A[i]<<"|";
+	archivo<<A[i]<<"|";
+  }
+cout<<"\n";
+archivo<<"\n";
+
+headsort (A,n);
+    cout<<"El orden es:|";
+	archivo<<"El orden es:|";
+    for(int i=1;i<=n;i++){
+    cout<<A[i]<<"|";
+	archivo<<A[i]<<"|";
+	}
+archivo.close();
+
+
+return 0;
+
+}
+void headsort (int b[] ,int n)
+{
+
+int valor,temp,a;
+{
+    int valor,temp,a;
+
+    for(int i=n; i>0; i--)
+    {
+        for(int j=0; j<=i; j++)
+        {
+            valor=b[j];
+            a=j/2;
+            while(a>0 && b[a]<valor)
+            {
+                b[j]=b[a];
+                j=a;
+                a=a/2;
+            }
+            b[j]=valor;
+        }
+        temp=b[1];
+        b[1]=b[i];
+        b[i]=temp;
+    }
+
+}}
