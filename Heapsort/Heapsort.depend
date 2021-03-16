@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1615871026 source:d:\desktop\heapsort\main.cpp
+	<iostream>
+	"Orheapsort.h"
+
+1615871026 d:\desktop\heapsort\orheapsort.h
+
